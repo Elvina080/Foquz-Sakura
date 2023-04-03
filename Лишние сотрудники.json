@@ -1,0 +1,217 @@
+[
+    {
+        "id": 1,
+        "fio": null,
+        "photo": null,
+        "filial_id": 1,
+        "filial_name": "Филиал1",
+        "post_names": "Администратор филиала",
+        "posts": [
+            {
+                "code": "administrator",
+                "name": "Администратор филиала"
+            }
+        ],
+        "filial_company_id": null,
+        "filial_company_name": null,
+        "company_id": null,
+        "company_name": null
+    },
+    {
+        "id": 39,
+        "fio": null,
+        "photo": null,
+        "filial_id": 4,
+        "filial_name": "Бутово",
+        "post_names": "Водитель",
+        "posts": [
+            {
+                "code": "driver",
+                "name": "Водитель"
+            }
+        ],
+        "filial_company_id": 3,
+        "filial_company_name": "Тест",
+        "company_id": null,
+        "company_name": null
+    },
+    {
+        "id": 40,
+        "fio": null,
+        "photo": null,
+        "filial_id": 3,
+        "filial_name": "Щербинка",
+        "post_names": "Водитель",
+        "posts": [
+            {
+                "code": "driver",
+                "name": "Водитель"
+            }
+        ],
+        "filial_company_id": 1,
+        "filial_company_name": "Юр лицо 1",
+        "company_id": null,
+        "company_name": null
+    },
+    {
+        "id": 44,
+        "fio": null,
+        "photo": null,
+        "filial_id": 3,
+        "filial_name": "Щербинка",
+        "post_names": "Водитель",
+        "posts": [
+            {
+                "code": "driver",
+                "name": "Водитель"
+            }
+        ],
+        "filial_company_id": 1,
+        "filial_company_name": "Юр лицо 1",
+        "company_id": null,
+        "company_name": null
+    },
+    {
+        "id": 46,
+        "fio": null,
+        "photo": null,
+        "filial_id": 4,
+        "filial_name": "Бутово",
+        "post_names": "Водитель",
+        "posts": [
+            {
+                "code": "driver",
+                "name": "Водитель"
+            }
+        ],
+        "filial_company_id": 3,
+        "filial_company_name": "Тест",
+        "company_id": null,
+        "company_name": null
+    },
+    {
+        "id": 47,
+        "fio": null,
+        "photo": null,
+        "filial_id": 4,
+        "filial_name": "Бутово",
+        "post_names": "Водитель",
+        "posts": [
+            {
+                "code": "driver",
+                "name": "Водитель"
+            }
+        ],
+        "filial_company_id": 3,
+        "filial_company_name": "Тест",
+        "company_id": null,
+        "company_name": null
+    },
+    {
+        "id": 48,
+        "fio": null,
+        "photo": null,
+        "filial_id": 4,
+        "filial_name": "Бутово",
+        "post_names": "Водитель",
+        "posts": [
+            {
+                "code": "driver",
+                "name": "Водитель"
+            }
+        ],
+        "filial_company_id": 3,
+        "filial_company_name": "Тест",
+        "company_id": null,
+        "company_name": null
+    },
+    {
+        "id": 49,
+        "fio": null,
+        "photo": null,
+        "filial_id": 4,
+        "filial_name": "Бутово",
+        "post_names": "Водитель",
+        "posts": [
+            {
+                "code": "driver",
+                "name": "Водитель"
+            }
+        ],
+        "filial_company_id": 3,
+        "filial_company_name": "Тест",
+        "company_id": null,
+        "company_name": null
+    },
+    {
+        "id": 125,
+        "fio": "",
+        "photo": null,
+        "filial_id": 7,
+        "filial_name": "Подольск",
+        "post_names": "Администратор филиала",
+        "posts": [
+            {
+                "code": "administrator",
+                "name": "Администратор филиала"
+            }
+        ],
+        "filial_company_id": null,
+        "filial_company_name": null,
+        "company_id": null,
+        "company_name": null
+    },
+    {
+        "id": 243,
+        "fio": " Ле Андрей",
+        "photo": null,
+        "filial_id": 4,
+        "filial_name": "Бутово",
+        "post_names": "Повар-сушист",
+        "posts": [
+            {
+                "code": "suhi",
+                "name": "Повар-сушист"
+            }
+        ],
+        "filial_company_id": 3,
+        "filial_company_name": "Тест",
+        "company_id": null,
+        "company_name": null
+    },
+    {
+        "id": 194,
+        "fio": " Матюхова Василиса( уволена)",
+        "photo": null,
+        "filial_id": 4,
+        "filial_name": "Бутово",
+        "post_names": "Администратор филиала",
+        "posts": [
+            {
+                "code": "administrator",
+                "name": "Администратор филиала"
+            }
+        ],
+        "filial_company_id": 3,
+        "filial_company_name": "Тест",
+        "company_id": null,
+        "company_name": null
+    },
+    {
+        "id": 157,
+        "fio": " Трубич Николай Николаевич",
+        "photo": null,
+        "filial_id": 7,
+        "filial_name": "Подольск",
+        "post_names": "Администратор филиала",
+        "posts": [
+            {
+                "code": "administrator",
+                "name": "Администратор филиала"
+            }
+        ],
+        "filial_company_id": null,
+        "filial_company_name": null,
+        "company_id": null,
+        "company_name": null
+    },
