@@ -1,0 +1,61 @@
+{
+    "name": "Database Exception",
+    "message": "SQLSTATE[42S22]: Column not found: 1054 Unknown column 'executorName' in 'order clause'\nThe SQL being executed was: SELECT `f`.* FROM `feedback` `f` LEFT JOIN `foquz_poll_answer` ON `f`.`id` = `foquz_poll_answer`.`feedback_id` LEFT JOIN `foquz_poll` ON `foquz_poll_answer`.`foquz_poll_id` = `foquz_poll`.`id` LEFT JOIN `company` `fpac` ON `foquz_poll`.`company_id` = `fpac`.`id` LEFT JOIN `requests_project_answer` ON `f`.`id` = `requests_project_answer`.`feedback_id` LEFT JOIN `requests_project` ON `requests_project_answer`.`request_project_id` = `requests_project`.`id` LEFT JOIN `company` `rpac` ON `requests_project`.`company_id` = `rpac`.`id` LEFT JOIN `company_feedback` ON `f`.`id` = `company_feedback`.`feedback_id` LEFT JOIN `company` `cfc` ON `company_feedback`.`company_id` = `cfc`.`id` WHERE CASE \n                    WHEN f.view = 'poll' THEN fpac.id = 1 \n                    WHEN f.view = 'request' THEN rpac.id = 1\n                    WHEN f.view = 'feedback' THEN cfc.id = 1\n                END ORDER BY `executorName` LIMIT 10",
+    "code": "42S22",
+    "type": "yii\\db\\Exception",
+    "file": "/var/www/doxswf.ru/project/vendor/yiisoft/yii2/db/Schema.php",
+    "line": 676,
+    "stack-trace": [
+        "#0 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/db/Command.php(1307): yii\\db\\Schema->convertException(Object(PDOException), 'SELECT `f`.* FR...')",
+        "#1 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/db/Command.php(1168): yii\\db\\Command->internalExecute('SELECT `f`.* FR...')",
+        "#2 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/db/Command.php(410): yii\\db\\Command->queryInternal('fetchAll', NULL)",
+        "#3 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/db/Query.php(249): yii\\db\\Command->queryAll()",
+        "#4 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\\db\\Query->all(NULL)",
+        "#5 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/data/ActiveDataProvider.php(115): yii\\db\\ActiveQuery->all(NULL)",
+        "#6 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/data/BaseDataProvider.php(101): yii\\data\\ActiveDataProvider->prepareModels()",
+        "#7 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/data/BaseDataProvider.php(114): yii\\data\\BaseDataProvider->prepare()",
+        "#8 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/rest/Serializer.php(194): yii\\data\\BaseDataProvider->getModels()",
+        "#9 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/rest/Serializer.php(154): yii\\rest\\Serializer->serializeDataProvider(Object(yii\\data\\ActiveDataProvider))",
+        "#10 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/rest/Controller.php(99): yii\\rest\\Serializer->serialize(Object(yii\\data\\ActiveDataProvider))",
+        "#11 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/rest/Controller.php(77): yii\\rest\\Controller->serializeData(Object(yii\\data\\ActiveDataProvider))",
+        "#12 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/Controller.php(180): yii\\rest\\Controller->afterAction(Object(yii\\base\\InlineAction), Object(yii\\data\\ActiveDataProvider))",
+        "#13 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/Module.php(552): yii\\base\\Controller->runAction('', Array)",
+        "#14 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/web/Application.php(103): yii\\base\\Module->runAction('foquz/api/feedb...', Array)",
+        "#15 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/Application.php(384): yii\\web\\Application->handleRequest(Object(yii\\web\\Request))",
+        "#16 /var/www/doxswf.ru/project/web/index.php(82): yii\\base\\Application->run()",
+        "#17 {main}"
+    ],
+    "error-info": [
+        "42S22",
+        1054,
+        "Unknown column 'executorName' in 'order clause'"
+    ],
+    "previous": {
+        "name": "Exception",
+        "message": "SQLSTATE[42S22]: Column not found: 1054 Unknown column 'executorName' in 'order clause'",
+        "code": "42S22",
+        "type": "PDOException",
+        "file": "/var/www/doxswf.ru/project/vendor/yiisoft/yii2/db/Command.php",
+        "line": 1302,
+        "stack-trace": [
+            "#0 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/db/Command.php(1302): PDOStatement->execute()",
+            "#1 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/db/Command.php(1168): yii\\db\\Command->internalExecute('SELECT `f`.* FR...')",
+            "#2 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/db/Command.php(410): yii\\db\\Command->queryInternal('fetchAll', NULL)",
+            "#3 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/db/Query.php(249): yii\\db\\Command->queryAll()",
+            "#4 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\\db\\Query->all(NULL)",
+            "#5 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/data/ActiveDataProvider.php(115): yii\\db\\ActiveQuery->all(NULL)",
+            "#6 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/data/BaseDataProvider.php(101): yii\\data\\ActiveDataProvider->prepareModels()",
+            "#7 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/data/BaseDataProvider.php(114): yii\\data\\BaseDataProvider->prepare()",
+            "#8 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/rest/Serializer.php(194): yii\\data\\BaseDataProvider->getModels()",
+            "#9 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/rest/Serializer.php(154): yii\\rest\\Serializer->serializeDataProvider(Object(yii\\data\\ActiveDataProvider))",
+            "#10 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/rest/Controller.php(99): yii\\rest\\Serializer->serialize(Object(yii\\data\\ActiveDataProvider))",
+            "#11 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/rest/Controller.php(77): yii\\rest\\Controller->serializeData(Object(yii\\data\\ActiveDataProvider))",
+            "#12 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/Controller.php(180): yii\\rest\\Controller->afterAction(Object(yii\\base\\InlineAction), Object(yii\\data\\ActiveDataProvider))",
+            "#13 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/Module.php(552): yii\\base\\Controller->runAction('', Array)",
+            "#14 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/web/Application.php(103): yii\\base\\Module->runAction('foquz/api/feedb...', Array)",
+            "#15 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/Application.php(384): yii\\web\\Application->handleRequest(Object(yii\\web\\Request))",
+            "#16 /var/www/doxswf.ru/project/web/index.php(82): yii\\base\\Application->run()",
+            "#17 {main}"
+        ]
+    }
+}
