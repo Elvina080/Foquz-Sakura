@@ -1,0 +1,587 @@
+[
+    {
+        "id": 125,
+        "name": "элемент 1",
+        "description": "",
+        "category_id": 68,
+        "sort": 63,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 116,
+        "name": "новый источник58",
+        "description": "",
+        "category_id": 67,
+        "sort": 61,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 118,
+        "name": "новый источник59",
+        "description": "",
+        "category_id": 67,
+        "sort": 60,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 103,
+        "name": "новый источник45",
+        "description": "",
+        "category_id": 67,
+        "sort": 59,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 124,
+        "name": "новый источник61",
+        "description": "",
+        "category_id": 67,
+        "sort": 58,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 113,
+        "name": "новый источник55",
+        "description": "",
+        "category_id": 67,
+        "sort": 57,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 114,
+        "name": "новый источник57",
+        "description": "",
+        "category_id": 67,
+        "sort": 56,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 111,
+        "name": "новый источник53",
+        "description": "",
+        "category_id": 67,
+        "sort": 55,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 102,
+        "name": "новый источник44",
+        "description": "",
+        "category_id": 67,
+        "sort": 54,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 101,
+        "name": "новый источник43",
+        "description": "",
+        "category_id": 67,
+        "sort": 53,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 109,
+        "name": "новый источник51",
+        "description": "",
+        "category_id": 67,
+        "sort": 52,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 107,
+        "name": "новый источник49",
+        "description": "",
+        "category_id": 67,
+        "sort": 51,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 108,
+        "name": "новый источник50",
+        "description": "",
+        "category_id": 67,
+        "sort": 50,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 104,
+        "name": "новый источник46",
+        "description": "",
+        "category_id": 67,
+        "sort": 49,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 106,
+        "name": "новый источник48",
+        "description": "",
+        "category_id": 67,
+        "sort": 48,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 112,
+        "name": "новый источник54",
+        "description": "",
+        "category_id": 67,
+        "sort": 47,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 105,
+        "name": "новый источник47",
+        "description": "",
+        "category_id": 67,
+        "sort": 46,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 100,
+        "name": "новый источник42",
+        "description": "",
+        "category_id": 67,
+        "sort": 45,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 110,
+        "name": "новый источник52",
+        "description": "",
+        "category_id": 67,
+        "sort": 44,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 97,
+        "name": "новый источник39",
+        "description": "",
+        "category_id": 67,
+        "sort": 43,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 96,
+        "name": "новый источник38",
+        "description": "",
+        "category_id": 67,
+        "sort": 42,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 95,
+        "name": "новый источник37",
+        "description": "",
+        "category_id": 67,
+        "sort": 41,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 93,
+        "name": "новый источник35",
+        "description": "",
+        "category_id": 67,
+        "sort": 40,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 92,
+        "name": "новый источник34",
+        "description": "",
+        "category_id": 67,
+        "sort": 39,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 91,
+        "name": "новый источник33",
+        "description": "",
+        "category_id": 67,
+        "sort": 38,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 90,
+        "name": "новый источник32",
+        "description": "",
+        "category_id": 67,
+        "sort": 37,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 94,
+        "name": "новый источник36",
+        "description": "",
+        "category_id": 67,
+        "sort": 36,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 89,
+        "name": "новый источник31",
+        "description": "",
+        "category_id": 67,
+        "sort": 35,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 88,
+        "name": "новый источник30",
+        "description": "",
+        "category_id": 67,
+        "sort": 34,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 99,
+        "name": "новый источник41",
+        "description": "",
+        "category_id": 67,
+        "sort": 33,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 87,
+        "name": "новый источник29",
+        "description": "",
+        "category_id": 67,
+        "sort": 32,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 98,
+        "name": "новый источник40",
+        "description": "",
+        "category_id": 67,
+        "sort": 31,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 86,
+        "name": "новый источник28",
+        "description": "",
+        "category_id": 67,
+        "sort": 30,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 85,
+        "name": "новый источник27",
+        "description": "",
+        "category_id": 67,
+        "sort": 29,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 80,
+        "name": "новый источник22",
+        "description": "",
+        "category_id": 67,
+        "sort": 28,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 82,
+        "name": "новый источник24",
+        "description": "",
+        "category_id": 67,
+        "sort": 27,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 78,
+        "name": "новый источник20",
+        "description": "",
+        "category_id": 67,
+        "sort": 26,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 77,
+        "name": "новый источник19",
+        "description": "",
+        "category_id": 67,
+        "sort": 25,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 79,
+        "name": "новый источник21",
+        "description": "",
+        "category_id": 67,
+        "sort": 24,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 74,
+        "name": "новый источник16",
+        "description": "",
+        "category_id": 67,
+        "sort": 23,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 73,
+        "name": "новый источник15",
+        "description": "",
+        "category_id": 67,
+        "sort": 22,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 75,
+        "name": "новый источник17",
+        "description": "",
+        "category_id": 67,
+        "sort": 21,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 76,
+        "name": "новый источник18",
+        "description": "",
+        "category_id": 67,
+        "sort": 20,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 72,
+        "name": "новый источник14",
+        "description": "",
+        "category_id": 67,
+        "sort": 19,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 81,
+        "name": "новый источник23",
+        "description": "",
+        "category_id": 67,
+        "sort": 18,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 83,
+        "name": "новый источник25",
+        "description": "",
+        "category_id": 67,
+        "sort": 17,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 70,
+        "name": "новый источник12",
+        "description": "",
+        "category_id": 67,
+        "sort": 16,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 71,
+        "name": "новый источник13",
+        "description": "",
+        "category_id": 67,
+        "sort": 15,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 115,
+        "name": "новый источник56",
+        "description": "",
+        "category_id": 67,
+        "sort": 14,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 69,
+        "name": "новый источник11",
+        "description": "",
+        "category_id": 67,
+        "sort": 13,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 68,
+        "name": "новый источник10",
+        "description": "",
+        "category_id": 67,
+        "sort": 12,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 64,
+        "name": "новый источник6",
+        "description": "",
+        "category_id": 67,
+        "sort": 11,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 65,
+        "name": "новый источник7",
+        "description": "",
+        "category_id": 67,
+        "sort": 10,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 63,
+        "name": "новый источник5",
+        "description": "",
+        "category_id": 67,
+        "sort": 9,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 66,
+        "name": "новый источник8",
+        "description": "",
+        "category_id": 67,
+        "sort": 8,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 61,
+        "name": "новый источник3",
+        "description": "",
+        "category_id": 67,
+        "sort": 7,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 67,
+        "name": "новый источник9",
+        "description": "",
+        "category_id": 67,
+        "sort": 6,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 60,
+        "name": "новый источник2",
+        "description": "",
+        "category_id": 67,
+        "sort": 5,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 58,
+        "name": "источник новый",
+        "description": "",
+        "category_id": 67,
+        "sort": 4,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 62,
+        "name": "новый источник4",
+        "description": "",
+        "category_id": 67,
+        "sort": 3,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 59,
+        "name": "новый источник1",
+        "description": "",
+        "category_id": 67,
+        "sort": 2,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 84,
+        "name": "новый источник26",
+        "description": "",
+        "category_id": 67,
+        "sort": 1,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 10,
+        "name": "Создал новый источник без категории",
+        "description": "Источник не должен находиться в категории",
+        "category_id": 11,
+        "sort": 10,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 127,
+        "name": "элемент 3  без категории",
+        "description": "",
+        "category_id": 0,
+        "sort": 65,
+        "is_active": 1,
+        "is_archive": 0
+    },
+    {
+        "id": 122,
+        "name": "новый источник60",
+        "description": "",
+        "category_id": 0,
+        "sort": 62,
+        "is_active": 1,
+        "is_archive": 0
+    }
+]
