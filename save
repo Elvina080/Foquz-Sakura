@@ -1,0 +1,20 @@
+{
+    "name": "Exception",
+    "message": "[transaction_type_id] Тип проводки (transaction_type_id) не соответствует типу операции (type)",
+    "code": 0,
+    "type": "InvalidArgumentException",
+    "file": "/home/d/doxsw/hrmdemo.doxsw.com/project/backend/models/accounts/PersonalHistory.php",
+    "line": 781,
+    "stack-trace": [
+        "#0 /home/d/doxsw/hrmdemo.doxsw.com/project/backend/models/accounts/PersonalHistory.php(734): backend\\models\\accounts\\PersonalHistory::fillModel(Object(backend\\models\\accounts\\PersonalHistory), Array)",
+        "#1 /home/d/doxsw/hrmdemo.doxsw.com/project/backend/controllers/api/WorkerProfileController.php(759): backend\\models\\accounts\\PersonalHistory::createTransaction(Array)",
+        "#2 [internal function]: backend\\controllers\\api\\WorkerProfileController->actionCreateTransaction()",
+        "#3 /home/d/doxsw/hrmdemo.doxsw.com/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)",
+        "#4 /home/d/doxsw/hrmdemo.doxsw.com/project/vendor/yiisoft/yii2/base/Controller.php(178): yii\\base\\InlineAction->runWithParams(Array)",
+        "#5 /home/d/doxsw/hrmdemo.doxsw.com/project/vendor/yiisoft/yii2/base/Module.php(552): yii\\base\\Controller->runAction('create-transact...', Array)",
+        "#6 /home/d/doxsw/hrmdemo.doxsw.com/project/vendor/yiisoft/yii2/web/Application.php(103): yii\\base\\Module->runAction('api/worker-prof...', Array)",
+        "#7 /home/d/doxsw/hrmdemo.doxsw.com/project/vendor/yiisoft/yii2/base/Application.php(384): yii\\web\\Application->handleRequest(Object(yii\\web\\Request))",
+        "#8 /home/d/doxsw/hrmdemo.doxsw.com/project/backend/web/index.php(35): yii\\base\\Application->run()",
+        "#9 {main}"
+    ]
+}
