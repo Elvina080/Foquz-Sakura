@@ -1,0 +1,22 @@
+{
+    "name": "Exception",
+    "message": "Формат изображения png не поддерижвается",
+    "code": 0,
+    "type": "RuntimeException",
+    "file": "/home/d/doxsw/hrmdemo.doxsw.com/project/backend/models/HrmFile.php",
+    "line": 336,
+    "stack-trace": [
+        "#0 /home/d/doxsw/hrmdemo.doxsw.com/project/backend/lib/file/FileService.php(231): backend\\models\\HrmFile->createThumbnail(100)",
+        "#1 /home/d/doxsw/hrmdemo.doxsw.com/project/backend/lib/service/WorkerPhotoThumbnailService.php(67): backend\\lib\\file\\FileService->getWorkerPhotoThumbnail(Object(backend\\models\\HrmFile))",
+        "#2 /home/d/doxsw/hrmdemo.doxsw.com/project/backend/models/api/ApiWorker.php(2260): backend\\lib\\service\\WorkerPhotoThumbnailService->getThumbnailUrl()",
+        "#3 /home/d/doxsw/hrmdemo.doxsw.com/project/backend/controllers/api/WorkerProfileController.php(1177): backend\\models\\api\\ApiWorker::getWorkersForSelect()",
+        "#4 [internal function]: backend\\controllers\\api\\WorkerProfileController->actionWorkerList()",
+        "#5 /home/d/doxsw/hrmdemo.doxsw.com/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)",
+        "#6 /home/d/doxsw/hrmdemo.doxsw.com/project/vendor/yiisoft/yii2/base/Controller.php(178): yii\\base\\InlineAction->runWithParams(Array)",
+        "#7 /home/d/doxsw/hrmdemo.doxsw.com/project/vendor/yiisoft/yii2/base/Module.php(552): yii\\base\\Controller->runAction('worker-list', Array)",
+        "#8 /home/d/doxsw/hrmdemo.doxsw.com/project/vendor/yiisoft/yii2/web/Application.php(103): yii\\base\\Module->runAction('api/worker-prof...', Array)",
+        "#9 /home/d/doxsw/hrmdemo.doxsw.com/project/vendor/yiisoft/yii2/base/Application.php(384): yii\\web\\Application->handleRequest(Object(yii\\web\\Request))",
+        "#10 /home/d/doxsw/hrmdemo.doxsw.com/project/backend/web/index.php(35): yii\\base\\Application->run()",
+        "#11 {main}"
+    ]
+}
