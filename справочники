@@ -1,0 +1,164 @@
+[
+    {
+        "id": "compensations",
+        "name": "Компенсации",
+        "count": 8,
+        "description": "",
+        "system": 1,
+        "used": 0,
+        "is_active": 1
+    },
+    {
+        "id": "employees",
+        "name": "Сотрудники компании",
+        "count": 783,
+        "description": "",
+        "system": 1,
+        "used": 0,
+        "is_active": 1
+    },
+    {
+        "id": "reasons",
+        "name": "Типы причин",
+        "count": 8,
+        "description": "",
+        "system": 1,
+        "used": 0,
+        "is_active": 1
+    },
+    {
+        "id": "fines",
+        "name": "Взыскания или нарушения",
+        "count": 250,
+        "description": "",
+        "system": 1,
+        "used": 0,
+        "is_active": 1
+    },
+    {
+        "id": "filials",
+        "name": "Филиалы",
+        "count": 46,
+        "description": "",
+        "system": 1,
+        "used": 0,
+        "is_active": 1
+    },
+    {
+        "id": "themes",
+        "name": "Темы виджета обратной связи",
+        "count": 5,
+        "description": "",
+        "system": 1,
+        "used": 0,
+        "is_active": 1
+    },
+    {
+        "id": 1,
+        "name": "Справочник",
+        "count": 0,
+        "description": "",
+        "system": 0,
+        "used": false,
+        "is_active": 1
+    },
+    {
+        "id": 8,
+        "name": "sdf",
+        "count": 3,
+        "description": "sdf",
+        "system": 0,
+        "used": true,
+        "is_active": 1
+    },
+    {
+        "id": 31,
+        "name": "Деактивировать",
+        "count": 1,
+        "description": "",
+        "system": 0,
+        "used": false,
+        "is_active": 0
+    },
+    {
+        "id": 35,
+        "name": "Документация",
+        "count": 0,
+        "description": "",
+        "system": 0,
+        "used": false,
+        "is_active": 1
+    },
+    {
+        "id": 36,
+        "name": "тест",
+        "count": 5,
+        "description": "описание справочника тест",
+        "system": 0,
+        "used": true,
+        "is_active": 1
+    },
+    {
+        "id": 40,
+        "name": "Только элементы",
+        "count": 1,
+        "description": "тест количество эл-в",
+        "system": 0,
+        "used": false,
+        "is_active": 1
+    },
+    {
+        "id": 41,
+        "name": "Большой",
+        "count": 3,
+        "description": "",
+        "system": 0,
+        "used": false,
+        "is_active": 1
+    },
+    {
+        "id": 42,
+        "name": "много",
+        "count": 1474,
+        "description": "",
+        "system": 0,
+        "used": true,
+        "is_active": 1
+    },
+    {
+        "id": 43,
+        "name": "Элементы внутри категорий",
+        "count": 1,
+        "description": "Тест кол-во элементов",
+        "system": 0,
+        "used": false,
+        "is_active": 1
+    },
+    {
+        "id": 44,
+        "name": "ыва",
+        "count": 3,
+        "description": "ыва",
+        "system": 0,
+        "used": false,
+        "is_active": 1
+    },
+    {
+        "id": 45,
+        "name": "Проверка удаленных",
+        "count": 3,
+        "description": "",
+        "system": 0,
+        "used": false,
+        "is_active": 1
+    },
+    {
+        "id": 46,
+        "name": "Проверка счетчиков с удаленными",
+        "count": 3,
+        "description": "",
+        "system": 0,
+        "used": false,
+        "is_active": 1
+    }
+]
