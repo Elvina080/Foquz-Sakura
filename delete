@@ -1,0 +1,25 @@
+{
+    "name": "Unknown Property",
+    "message": "Getting unknown property: backend\\models\\calculationsheet\\CalculationSheet::period_from",
+    "code": 0,
+    "type": "yii\\base\\UnknownPropertyException",
+    "file": "/home/d/doxsw/hrmdemo.doxsw.com/project/vendor/yiisoft/yii2/base/Component.php",
+    "line": 154,
+    "stack-trace": [
+        "#0 /home/d/doxsw/hrmdemo.doxsw.com/project/vendor/yiisoft/yii2/db/BaseActiveRecord.php(296): yii\\base\\Component->__get('period_from')",
+        "#1 /home/d/doxsw/hrmdemo.doxsw.com/project/vendor/yiisoft/yii2/validators/Validator.php(258): yii\\db\\BaseActiveRecord->__get('period_from')",
+        "#2 /home/d/doxsw/hrmdemo.doxsw.com/project/vendor/yiisoft/yii2/base/Model.php(367): yii\\validators\\Validator->validateAttributes(Object(backend\\models\\calculationsheet\\CalculationSheet), Array)",
+        "#3 /home/d/doxsw/hrmdemo.doxsw.com/project/vendor/yiisoft/yii2/db/ActiveRecord.php(674): yii\\base\\Model->validate(Array)",
+        "#4 /home/d/doxsw/hrmdemo.doxsw.com/project/vendor/yiisoft/yii2/db/BaseActiveRecord.php(679): yii\\db\\ActiveRecord->update(true, NULL)",
+        "#5 /home/d/doxsw/hrmdemo.doxsw.com/project/backend/models/calculationsheet/CalculationSheet.php(321): yii\\db\\BaseActiveRecord->save()",
+        "#6 /home/d/doxsw/hrmdemo.doxsw.com/project/backend/controllers/api/CalculationSheetController.php(321): backend\\models\\calculationsheet\\CalculationSheet->delete()",
+        "#7 [internal function]: backend\\controllers\\api\\CalculationSheetController->actionDelete()",
+        "#8 /home/d/doxsw/hrmdemo.doxsw.com/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)",
+        "#9 /home/d/doxsw/hrmdemo.doxsw.com/project/vendor/yiisoft/yii2/base/Controller.php(178): yii\\base\\InlineAction->runWithParams(Array)",
+        "#10 /home/d/doxsw/hrmdemo.doxsw.com/project/vendor/yiisoft/yii2/base/Module.php(552): yii\\base\\Controller->runAction('delete', Array)",
+        "#11 /home/d/doxsw/hrmdemo.doxsw.com/project/vendor/yiisoft/yii2/web/Application.php(103): yii\\base\\Module->runAction('api/calculation...', Array)",
+        "#12 /home/d/doxsw/hrmdemo.doxsw.com/project/vendor/yiisoft/yii2/base/Application.php(384): yii\\web\\Application->handleRequest(Object(yii\\web\\Request))",
+        "#13 /home/d/doxsw/hrmdemo.doxsw.com/project/backend/web/index.php(35): yii\\base\\Application->run()",
+        "#14 {main}"
+    ]
+}
