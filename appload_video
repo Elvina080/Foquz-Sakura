@@ -1,0 +1,43 @@
+{
+    "name": "Exception",
+    "message": "Unable to load FFProbe",
+    "code": 0,
+    "type": "FFMpeg\\Exception\\ExecutableNotFoundException",
+    "file": "/var/www/doxswf.ru/project/vendor/php-ffmpeg/php-ffmpeg/src/FFMpeg/Driver/FFProbeDriver.php",
+    "line": 50,
+    "stack-trace": [
+        "#0 /var/www/doxswf.ru/project/vendor/php-ffmpeg/php-ffmpeg/src/FFMpeg/FFProbe.php(207): FFMpeg\\Driver\\FFProbeDriver::create(Object(Alchemy\\BinaryDriver\\Configuration), NULL)",
+        "#1 /var/www/doxswf.ru/project/vendor/php-ffmpeg/php-ffmpeg/src/FFMpeg/FFMpeg.php(117): FFMpeg\\FFProbe::create(Array, NULL, Object(Doctrine\\Common\\Cache\\ArrayCache))",
+        "#2 /var/www/doxswf.ru/project/modules/foquz/controllers/api/QuestionsController.php(889): FFMpeg\\FFMpeg::create(Array)",
+        "#3 [internal function]: app\\modules\\foquz\\controllers\\api\\QuestionsController->actionVideoUpload('74471', NULL, NULL)",
+        "#4 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)",
+        "#5 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/Controller.php(178): yii\\base\\InlineAction->runWithParams(Array)",
+        "#6 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/Module.php(552): yii\\base\\Controller->runAction('video-upload', Array)",
+        "#7 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/web/Application.php(103): yii\\base\\Module->runAction('foquz/api/quest...', Array)",
+        "#8 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/Application.php(384): yii\\web\\Application->handleRequest(Object(yii\\web\\Request))",
+        "#9 /var/www/doxswf.ru/project/web/index.php(82): yii\\base\\Application->run()",
+        "#10 {main}"
+    ],
+    "previous": {
+        "name": "Exception",
+        "message": "Executable not found, proposed : /usr/bin/ffprobe",
+        "code": 0,
+        "type": "Alchemy\\BinaryDriver\\Exception\\ExecutableNotFoundException",
+        "file": "/var/www/doxswf.ru/project/vendor/alchemy/binary-driver/src/Alchemy/BinaryDriver/AbstractBinary.php",
+        "line": 160,
+        "stack-trace": [
+            "#0 /var/www/doxswf.ru/project/vendor/php-ffmpeg/php-ffmpeg/src/FFMpeg/Driver/FFProbeDriver.php(48): Alchemy\\BinaryDriver\\AbstractBinary::load(Array, NULL, Object(Alchemy\\BinaryDriver\\Configuration))",
+            "#1 /var/www/doxswf.ru/project/vendor/php-ffmpeg/php-ffmpeg/src/FFMpeg/FFProbe.php(207): FFMpeg\\Driver\\FFProbeDriver::create(Object(Alchemy\\BinaryDriver\\Configuration), NULL)",
+            "#2 /var/www/doxswf.ru/project/vendor/php-ffmpeg/php-ffmpeg/src/FFMpeg/FFMpeg.php(117): FFMpeg\\FFProbe::create(Array, NULL, Object(Doctrine\\Common\\Cache\\ArrayCache))",
+            "#3 /var/www/doxswf.ru/project/modules/foquz/controllers/api/QuestionsController.php(889): FFMpeg\\FFMpeg::create(Array)",
+            "#4 [internal function]: app\\modules\\foquz\\controllers\\api\\QuestionsController->actionVideoUpload('74471', NULL, NULL)",
+            "#5 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)",
+            "#6 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/Controller.php(178): yii\\base\\InlineAction->runWithParams(Array)",
+            "#7 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/Module.php(552): yii\\base\\Controller->runAction('video-upload', Array)",
+            "#8 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/web/Application.php(103): yii\\base\\Module->runAction('foquz/api/quest...', Array)",
+            "#9 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/Application.php(384): yii\\web\\Application->handleRequest(Object(yii\\web\\Request))",
+            "#10 /var/www/doxswf.ru/project/web/index.php(82): yii\\base\\Application->run()",
+            "#11 {main}"
+        ]
+    }
+}
