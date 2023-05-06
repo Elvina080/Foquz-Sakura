@@ -1,0 +1,53 @@
+{
+    "name": "Database Exception",
+    "message": "SQLSTATE[42000]: Syntax error or access violation: 1305 FUNCTION doxswf2_db.avg_score does not exist\nThe SQL being executed was: SELECT `FPA`.*, IF(executor.name = \"\" OR executor.name is null, executor.username, executor.name) as userName, IF(moderator.name = \"\" OR moderator.name is null, moderator.username, moderator.name) as moderatorName, IF(\n                    foquz_poll.is_auto, \n                    IF(filials.category_id IS NULL, filials.name, CONCAT(filial_category.name, \"/\", filials.name)), \n                    IF(answerFilial.category_id IS NULL, answerFilial.name, CONCAT(answerFilialCategory.name, \"/\", answerFilial.name))\n                ) as filialName, IF(orders.number is null or orders.number = \"\", orders.id, orders.number) as orderNumber, (FPA.points / foquz_poll.max_points) * 100 as pointPercents, CASE WHEN FPA.device = \"desktop\" THEN \"Десктоп\" WHEN FPA.device = \"tablet\" THEN \"Планшет\" WHEN FPA.device = \"mobile\" THEN \"Смартфон\" ELSE \"\" END as deviceText, (CASE \n                    WHEN foquz_poll_answer_processings.id = null \n                        THEN null\n                    WHEN FPA.processing_time_in_minutes = null OR FPA.processing_time_in_minutes = 0\n                        THEN null\n                    WHEN foquz_poll_answer_processings.status IN (0, 1, 4) \n                        THEN DATE_ADD(FPA.updated_at, INTERVAL FPA.processing_time_in_minutes MINUTE)\n                    ELSE null\n                END) as processingTimeAt, (\n                                    SELECT COUNT(foquz_poll_answer_item.id)\n                                    FROM foquz_poll_answer_item \n                                    LEFT JOIN foquz_question ON foquz_question.id = foquz_poll_answer_item.foquz_question_id \n                                    WHERE foquz_question.id = 74482 AND foquz_poll_answer_item.foquz_poll_answer_id = FPA.id AND (CASE \n                                        WHEN foquz_question.main_question_type IN (14,10,7) THEN avg_score(foquz_poll_answer_item.answer->\"$.*\") \n                                        WHEN foquz_question.main_question_type = 0 AND (SELECT COUNT(*) FROM foquz_poll_dish_score ds WHERE ds.answer_id=foquz_poll_answer_item.id) > 0 THEN (SELECT AVG(score) FROM foquz_poll_dish_score ds WHERE ds.answer_id=foquz_poll_answer_item.id GROUP BY(foquz_poll_answer_item.id))\n                                        ELSE foquz_poll_answer_item.rating\n                                    END) BETWEEN 1 AND 5\n                                ) as range74482Count FROM `foquz_poll_answer` `FPA` LEFT JOIN `foquz_poll` ON foquz_poll.id = FPA.foquz_poll_id LEFT JOIN `orders` ON FPA.order_id = orders.id LEFT JOIN `foquz_poll_answer_processings` ON FPA.id = foquz_poll_answer_processings.poll_answer_id LEFT JOIN `user` `executor` ON foquz_poll_answer_processings.executor_id = executor.id LEFT JOIN `user` `moderator` ON foquz_poll_answer_processings.moderator_id = moderator.id LEFT JOIN `filials` ON filials.id = orders.filial_id LEFT JOIN `filials` `answerFilial` ON answerFilial.id = FPA.answer_filial_id LEFT JOIN `filial_category` ON filial_category.id = filials.category_id LEFT JOIN `filial_category` `answerFilialCategory` ON answerFilialCategory.id = answerFilial.category_id WHERE ((`foquz_poll`.`company_id`=1) AND (`foquz_poll`.`deleted`=0) AND (`foquz_poll`.`status`=0)) AND (`FPA`.`status` IN ('in-progress', 'done')) AND (`FPA`.`foquz_poll_id`='26499') GROUP BY `FPA`.`id` HAVING range74482Count > 0 ORDER BY `FPA`.`updated_at` DESC LIMIT 30",
+    "code": "42000",
+    "type": "yii\\db\\Exception",
+    "file": "/var/www/doxswf.ru/project/vendor/yiisoft/yii2/db/Schema.php",
+    "line": 676,
+    "stack-trace": [
+        "#0 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/db/Command.php(1307): yii\\db\\Schema->convertException(Object(PDOException), 'SELECT `FPA`.*,...')",
+        "#1 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/db/Command.php(1168): yii\\db\\Command->internalExecute('SELECT `FPA`.*,...')",
+        "#2 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/db/Command.php(410): yii\\db\\Command->queryInternal('fetchAll', NULL)",
+        "#3 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/db/Query.php(249): yii\\db\\Command->queryAll()",
+        "#4 /var/www/doxswf.ru/project/modules/foquz/models/FoquzPollAnswerSearch.php(941): yii\\db\\Query->all()",
+        "#5 /var/www/doxswf.ru/project/modules/foquz/controllers/api/AnswersController.php(58): app\\modules\\foquz\\models\\FoquzPollAnswerSearch->search(Array)",
+        "#6 [internal function]: app\\modules\\foquz\\controllers\\api\\AnswersController->actionIndex()",
+        "#7 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)",
+        "#8 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/Controller.php(178): yii\\base\\InlineAction->runWithParams(Array)",
+        "#9 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/Module.php(552): yii\\base\\Controller->runAction('', Array)",
+        "#10 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/web/Application.php(103): yii\\base\\Module->runAction('foquz/api/answe...', Array)",
+        "#11 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/Application.php(384): yii\\web\\Application->handleRequest(Object(yii\\web\\Request))",
+        "#12 /var/www/doxswf.ru/project/web/index.php(82): yii\\base\\Application->run()",
+        "#13 {main}"
+    ],
+    "error-info": [
+        "42000",
+        1305,
+        "FUNCTION doxswf2_db.avg_score does not exist"
+    ],
+    "previous": {
+        "name": "Exception",
+        "message": "SQLSTATE[42000]: Syntax error or access violation: 1305 FUNCTION doxswf2_db.avg_score does not exist",
+        "code": "42000",
+        "type": "PDOException",
+        "file": "/var/www/doxswf.ru/project/vendor/yiisoft/yii2/db/Command.php",
+        "line": 1302,
+        "stack-trace": [
+            "#0 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/db/Command.php(1302): PDOStatement->execute()",
+            "#1 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/db/Command.php(1168): yii\\db\\Command->internalExecute('SELECT `FPA`.*,...')",
+            "#2 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/db/Command.php(410): yii\\db\\Command->queryInternal('fetchAll', NULL)",
+            "#3 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/db/Query.php(249): yii\\db\\Command->queryAll()",
+            "#4 /var/www/doxswf.ru/project/modules/foquz/models/FoquzPollAnswerSearch.php(941): yii\\db\\Query->all()",
+            "#5 /var/www/doxswf.ru/project/modules/foquz/controllers/api/AnswersController.php(58): app\\modules\\foquz\\models\\FoquzPollAnswerSearch->search(Array)",
+            "#6 [internal function]: app\\modules\\foquz\\controllers\\api\\AnswersController->actionIndex()",
+            "#7 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)",
+            "#8 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/Controller.php(178): yii\\base\\InlineAction->runWithParams(Array)",
+            "#9 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/Module.php(552): yii\\base\\Controller->runAction('', Array)",
+            "#10 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/web/Application.php(103): yii\\base\\Module->runAction('foquz/api/answe...', Array)",
+            "#11 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/Application.php(384): yii\\web\\Application->handleRequest(Object(yii\\web\\Request))",
+            "#12 /var/www/doxswf.ru/project/web/index.php(82): yii\\base\\Application->run()",
+            "#13 {main}"
+        ]
+    }
+}
