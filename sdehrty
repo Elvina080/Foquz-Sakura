@@ -1,0 +1,19 @@
+{
+    "name": "Exception",
+    "message": "Syntax error",
+    "code": 4,
+    "type": "JsonException",
+    "file": "/var/www/standhrm1.doxsw.com/project/backend/controllers/api/EducationalMaterialController.php",
+    "line": 132,
+    "stack-trace": [
+        "#0 /var/www/standhrm1.doxsw.com/project/backend/controllers/api/EducationalMaterialController.php(132): json_decode('', true, 512, 4194304)",
+        "#1 [internal function]: backend\\controllers\\api\\EducationalMaterialController->actionCreate()",
+        "#2 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)",
+        "#3 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/base/Controller.php(178): yii\\base\\InlineAction->runWithParams(Array)",
+        "#4 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/base/Module.php(552): yii\\base\\Controller->runAction('create', Array)",
+        "#5 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/web/Application.php(103): yii\\base\\Module->runAction('api/educational...', Array)",
+        "#6 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/base/Application.php(384): yii\\web\\Application->handleRequest(Object(yii\\web\\Request))",
+        "#7 /var/www/standhrm1.doxsw.com/project/backend/web/index.php(36): yii\\base\\Application->run()",
+        "#8 {main}"
+    ]
+}
