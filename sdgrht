@@ -1,0 +1,61 @@
+{
+    "name": "Database Exception",
+    "message": "SQLSTATE[42S22]: Column not found: 1054 Unknown column '0' in 'order clause'\nThe SQL being executed was: SELECT `personal_history`.`id`, `personal_history`.`type`, `personal_history`.`id_user`, `personal_history`.`id_worker`, `personal_history`.`id_worker_author`, `personal_history`.`update_user_id`, `personal_history`.`amount`, (personal_history.balance - personal_history.amount) AS `amount_before`, IF(personal_history.amount > 0, personal_history.amount, 0) AS `added_amount`, IF(personal_history.amount < 0, personal_history.amount, 0) AS `withdraw_amount`, `personal_history`.`date_user`, `personal_history`.`date_created`, `personal_history`.`date_updated`, `R`.`title`, `personal_history`.`filial_id`, `personal_history`.`company_id`, `personal_history`.`vacation_id`, `personal_history`.`transaction_method_id`, `personal_history`.`transaction_type_id`, `personal_history`.`money_source_id`, `personal_history`.`post_code`, `P`.`type_post` AS `post_code_group`, `TP`.`name` AS `post_code_group_name`, `personal_history`.`comment`, `personal_history`.`id_reason`, (CASE\n                        WHEN personal_history.id_reason IS NOT NULL THEN R.title\n                        WHEN personal_history.vacation_id IS NOT NULL THEN \n                            IF(VAC.category =  'vacation', CONCAT(VACTYPE.name, ' ', DATE_FORMAT(VAC.from_dt, '%d.%m.%Y'), '-', DATE_FORMAT(VAC.to_dt, '%d.%m.%Y')), CONCAT('Больничный', ' ', DATE_FORMAT(VAC.from_dt, '%d.%m.%Y'), '-', DATE_FORMAT(VAC.to_dt, '%d.%m.%Y')))\n                        WHEN personal_history.calc_prod_id IS NOT NULL OR personal_history.calc_driver_id IS NOT NULL THEN\n                            IF(personal_history.amount > 0, 'Начислено при расчете заработной платы', 'Списано при расчете заработной платы')\n                        WHEN personal_history.bonus_fine_id IS NOT NULL THEN \n                            IF(personal_history.amount > 0, B.description, F.description)\n                        ELSE ''\n                             END) AS `reason`, `personal_history`.`calc_prod_id`, `personal_history`.`calc_driver_id`, `personal_history`.`bonus_fine_id`, `UBP`.`type_id` AS `bonus_fine_type_id`, IF(C.smena=3, 0, CP.sum_bonus) AS `sum_bonus`, IF(C.smena=3, 0, CP.sum_penalty) AS `sum_penalty`, `personal_history`.`balance` AS `balance_end`, (personal_history.balance - personal_history.amount) AS `balance`, ( IF(C.smena=3, 0,\n                    IFNULL(CP.sum_bonus_calc, 0)\n                    + IFNULL(CP.sum_penalty_calc, 0)\n                    + IFNULL(CP.sum_compens, 0)\n                    + IFNULL(CP.sum_surcharge, 0)\n                    + IFNULL(CD.sum_distance, 0)\n                    + IFNULL(CD.sum_orders, 0)\n                    + IFNULL(CD.sum_departure, 0)\n                    + IFNULL(CD.sum_short_shift, 0)\n                    + IFNULL(CD.sum_surcharge, 0)\n                ) ) as sum_dynamic, IF(C.smena=3, 0, (IFNULL(CP.sum_salary, 0) + IFNULL(CD.sum_duration, 0))) AS `sum_salary`, `personal_history`.`is_delete`, `personal_history`.`delete_user_id`, `personal_history`.`delete_comment`, `personal_history`.`delete_date` FROM `personal_history` LEFT JOIN `user` `U` ON personal_history.id_user=U.id LEFT JOIN `worker` `uw` ON personal_history.id_user=uw.id LEFT JOIN `worker` `IW` ON personal_history.id_worker=IW.id LEFT JOIN `worker` `W` ON personal_history.id_worker_author=W.id LEFT JOIN `user` `UU` ON personal_history.update_user_id=UU.id LEFT JOIN `worker` `UpdateW` ON UU.id=UpdateW.user_id LEFT JOIN `user` `du` ON personal_history.delete_user_id=du.id LEFT JOIN `vacations` `VAC` ON personal_history.vacation_id =VAC.id LEFT JOIN `vacation_types` `VACTYPE` ON VAC.type_id = VACTYPE.id LEFT JOIN `worker` `dw` ON dw.user_id=du.id LEFT JOIN `reason_handbook` `R` ON personal_history.id_reason=R.id LEFT JOIN `calculation_production` `CP` ON personal_history.calc_prod_id=CP.id LEFT JOIN `calculation_drivers` `CD` ON personal_history.calc_driver_id=CD.id LEFT JOIN `calculation` `C` ON IFNULL(CP.calc_id, CD.calc_id)=C.ID LEFT JOIN `post` `P` ON P.code = personal_history.post_code LEFT JOIN `type_post` `TP` ON P.type_post = TP.code LEFT JOIN `transaction_method` `TM` ON TM.id = personal_history.transaction_method_id LEFT JOIN `user_bonus_penalty` `UBP` ON UBP.id = personal_history.bonus_fine_id LEFT JOIN `fine` `F` ON F.id = UBP.type_id AND UBP.type = 1 LEFT JOIN `bonus` `B` ON B.id = UBP.type_id AND UBP.type = 0 WHERE (`id_worker`=1248) AND (`is_delete`=0) ORDER BY `0`, `1` LIMIT 50",
+    "code": "42S22",
+    "type": "yii\\db\\Exception",
+    "file": "/var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/db/Schema.php",
+    "line": 676,
+    "stack-trace": [
+        "#0 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/db/Command.php(1307): yii\\db\\Schema->convertException(Object(PDOException), 'SELECT `persona...')",
+        "#1 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/db/Command.php(1168): yii\\db\\Command->internalExecute('SELECT `persona...')",
+        "#2 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/db/Command.php(410): yii\\db\\Command->queryInternal('fetchAll', NULL)",
+        "#3 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/db/Query.php(249): yii\\db\\Command->queryAll()",
+        "#4 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\\db\\Query->all(NULL)",
+        "#5 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/data/ActiveDataProvider.php(115): yii\\db\\ActiveQuery->all(NULL)",
+        "#6 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/data/BaseDataProvider.php(101): yii\\data\\ActiveDataProvider->prepareModels()",
+        "#7 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/data/BaseDataProvider.php(114): yii\\data\\BaseDataProvider->prepare()",
+        "#8 /var/www/standhrm1.doxsw.com/project/backend/models/accounts/PersonalHistorySearch.php(1509): yii\\data\\BaseDataProvider->getModels()",
+        "#9 /var/www/standhrm1.doxsw.com/project/backend/controllers/api/WorkerProfileController.php(562): backend\\models\\accounts\\PersonalHistorySearch::getHistoryNew(Array, Object(backend\\models\\worker\\Worker))",
+        "#10 [internal function]: backend\\controllers\\api\\WorkerProfileController->actionFinanceOperations()",
+        "#11 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)",
+        "#12 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/base/Controller.php(178): yii\\base\\InlineAction->runWithParams(Array)",
+        "#13 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/base/Module.php(552): yii\\base\\Controller->runAction('finance-operati...', Array)",
+        "#14 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/web/Application.php(103): yii\\base\\Module->runAction('api/worker-prof...', Array)",
+        "#15 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/base/Application.php(384): yii\\web\\Application->handleRequest(Object(yii\\web\\Request))",
+        "#16 /var/www/standhrm1.doxsw.com/project/backend/web/index.php(36): yii\\base\\Application->run()",
+        "#17 {main}"
+    ],
+    "error-info": [
+        "42S22",
+        1054,
+        "Unknown column '0' in 'order clause'"
+    ],
+    "previous": {
+        "name": "Exception",
+        "message": "SQLSTATE[42S22]: Column not found: 1054 Unknown column '0' in 'order clause'",
+        "code": "42S22",
+        "type": "PDOException",
+        "file": "/var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/db/Command.php",
+        "line": 1302,
+        "stack-trace": [
+            "#0 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/db/Command.php(1302): PDOStatement->execute()",
+            "#1 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/db/Command.php(1168): yii\\db\\Command->internalExecute('SELECT `persona...')",
+            "#2 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/db/Command.php(410): yii\\db\\Command->queryInternal('fetchAll', NULL)",
+            "#3 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/db/Query.php(249): yii\\db\\Command->queryAll()",
+            "#4 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\\db\\Query->all(NULL)",
+            "#5 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/data/ActiveDataProvider.php(115): yii\\db\\ActiveQuery->all(NULL)",
+            "#6 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/data/BaseDataProvider.php(101): yii\\data\\ActiveDataProvider->prepareModels()",
+            "#7 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/data/BaseDataProvider.php(114): yii\\data\\BaseDataProvider->prepare()",
+            "#8 /var/www/standhrm1.doxsw.com/project/backend/models/accounts/PersonalHistorySearch.php(1509): yii\\data\\BaseDataProvider->getModels()",
+            "#9 /var/www/standhrm1.doxsw.com/project/backend/controllers/api/WorkerProfileController.php(562): backend\\models\\accounts\\PersonalHistorySearch::getHistoryNew(Array, Object(backend\\models\\worker\\Worker))",
+            "#10 [internal function]: backend\\controllers\\api\\WorkerProfileController->actionFinanceOperations()",
+            "#11 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)",
+            "#12 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/base/Controller.php(178): yii\\base\\InlineAction->runWithParams(Array)",
+            "#13 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/base/Module.php(552): yii\\base\\Controller->runAction('finance-operati...', Array)",
+            "#14 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/web/Application.php(103): yii\\base\\Module->runAction('api/worker-prof...', Array)",
+            "#15 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/base/Application.php(384): yii\\web\\Application->handleRequest(Object(yii\\web\\Request))",
+            "#16 /var/www/standhrm1.doxsw.com/project/backend/web/index.php(36): yii\\base\\Application->run()",
+            "#17 {main}"
+        ]
+    }
+}
