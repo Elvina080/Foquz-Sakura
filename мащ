@@ -1,0 +1,23 @@
+{
+    "success": false,
+    "errors": {
+        "name": "Exception",
+        "message": "Argument 3 passed to app\\modules\\foquz\\controllers\\FoquzPollController::collectScaleStats() must be of the type string, null given, called in /var/www/doxswf.ru/project/modules/foquz/controllers/FoquzPollController.php on line 4076",
+        "code": 0,
+        "type": "TypeError",
+        "file": "/var/www/doxswf.ru/project/modules/foquz/controllers/FoquzPollController.php",
+        "line": 4897,
+        "stack-trace": [
+            "#0 /var/www/doxswf.ru/project/modules/foquz/controllers/FoquzPollController.php(4076): app\\modules\\foquz\\controllers\\FoquzPollController->collectScaleStats(Object(app\\modules\\foquz\\models\\FoquzQuestion), Array, NULL)",
+            "#1 /var/www/doxswf.ru/project/modules/foquz/controllers/FoquzPollController.php(3455): app\\modules\\foquz\\controllers\\FoquzPollController->collectStats('26951', Array)",
+            "#2 [internal function]: app\\modules\\foquz\\controllers\\FoquzPollController->actionStatsFilter()",
+            "#3 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)",
+            "#4 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/Controller.php(178): yii\\base\\InlineAction->runWithParams(Array)",
+            "#5 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/Module.php(552): yii\\base\\Controller->runAction('stats-filter', Array)",
+            "#6 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/web/Application.php(103): yii\\base\\Module->runAction('foquz/foquz-pol...', Array)",
+            "#7 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/Application.php(384): yii\\web\\Application->handleRequest(Object(yii\\web\\Request))",
+            "#8 /var/www/doxswf.ru/project/web/index.php(82): yii\\base\\Application->run()",
+            "#9 {main}"
+        ]
+    }
+}
