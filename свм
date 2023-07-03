@@ -1,0 +1,24 @@
+{
+    "name": "PHP Notice",
+    "message": "Undefined variable: donorQuestionLang",
+    "code": 8,
+    "type": "yii\\base\\ErrorException",
+    "file": "/var/www/doxswf.ru/project/modules/foquz/controllers/api/QuestionsController.php",
+    "line": 1186,
+    "stack-trace": [
+        "#0 /var/www/doxswf.ru/project/modules/foquz/controllers/api/QuestionsController.php(1186): yii\\base\\ErrorHandler->handleError(8, 'Undefined varia...', '/var/www/doxswf...', 1186, Array)",
+        "#1 [internal function]: app\\modules\\foquz\\controllers\\api\\QuestionsController->actionTranslate(76240, '2')",
+        "#2 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)",
+        "#3 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/Controller.php(178): yii\\base\\InlineAction->runWithParams(Array)",
+        "#4 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/Module.php(552): yii\\base\\Controller->runAction('translate', Array)",
+        "#5 /var/www/doxswf.ru/project/modules/foquz/controllers/api/PollController.php(1086): yii\\base\\Module->runAction('/foquz/api/ques...', Array)",
+        "#6 [internal function]: app\\modules\\foquz\\controllers\\api\\PollController->actionTranslate('26948', '2')",
+        "#7 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)",
+        "#8 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/Controller.php(178): yii\\base\\InlineAction->runWithParams(Array)",
+        "#9 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/Module.php(552): yii\\base\\Controller->runAction('translate', Array)",
+        "#10 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/web/Application.php(103): yii\\base\\Module->runAction('foquz/api/poll/...', Array)",
+        "#11 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/Application.php(384): yii\\web\\Application->handleRequest(Object(yii\\web\\Request))",
+        "#12 /var/www/doxswf.ru/project/web/index.php(82): yii\\base\\Application->run()",
+        "#13 {main}"
+    ]
+}
