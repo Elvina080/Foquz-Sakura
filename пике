@@ -1,0 +1,57 @@
+{
+    "name": "Integrity constraint violation",
+    "message": "SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`hrm1_db`.`money_source`, CONSTRAINT `fk-money_source-category_id` FOREIGN KEY (`category_id`) REFERENCES `money_source_category` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)\nThe SQL being executed was: INSERT INTO `money_source` (`name`, `category_id`, `description`, `is_archive`, `sort`) VALUES ('Источник 1', 0, '', 0, 67)",
+    "code": "23000",
+    "type": "yii\\db\\IntegrityException",
+    "file": "/var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/db/Schema.php",
+    "line": 676,
+    "stack-trace": [
+        "#0 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/db/Command.php(1307): yii\\db\\Schema->convertException(Object(PDOException), 'INSERT INTO `mo...')",
+        "#1 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/db/Command.php(1102): yii\\db\\Command->internalExecute('INSERT INTO `mo...')",
+        "#2 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/db/Schema.php(431): yii\\db\\Command->execute()",
+        "#3 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/db/ActiveRecord.php(604): yii\\db\\Schema->insert('money_source', Array)",
+        "#4 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/db/ActiveRecord.php(570): yii\\db\\ActiveRecord->insertInternal(NULL)",
+        "#5 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/db/BaseActiveRecord.php(676): yii\\db\\ActiveRecord->insert(true, NULL)",
+        "#6 /var/www/standhrm1.doxsw.com/project/backend/controllers/api/BaseController.php(192): yii\\db\\BaseActiveRecord->save()",
+        "#7 /var/www/standhrm1.doxsw.com/project/backend/controllers/api/MoneySourceController.php(37): backend\\controllers\\api\\BaseController->save(Object(backend\\models\\moneySource\\MoneySource))",
+        "#8 [internal function]: backend\\controllers\\api\\MoneySourceController->actionCreate()",
+        "#9 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)",
+        "#10 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/base/Controller.php(178): yii\\base\\InlineAction->runWithParams(Array)",
+        "#11 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/base/Module.php(552): yii\\base\\Controller->runAction('create', Array)",
+        "#12 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/web/Application.php(103): yii\\base\\Module->runAction('api/money-sourc...', Array)",
+        "#13 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/base/Application.php(384): yii\\web\\Application->handleRequest(Object(yii\\web\\Request))",
+        "#14 /var/www/standhrm1.doxsw.com/project/backend/web/index.php(36): yii\\base\\Application->run()",
+        "#15 {main}"
+    ],
+    "error-info": [
+        "23000",
+        1452,
+        "Cannot add or update a child row: a foreign key constraint fails (`hrm1_db`.`money_source`, CONSTRAINT `fk-money_source-category_id` FOREIGN KEY (`category_id`) REFERENCES `money_source_category` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)"
+    ],
+    "previous": {
+        "name": "Exception",
+        "message": "SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`hrm1_db`.`money_source`, CONSTRAINT `fk-money_source-category_id` FOREIGN KEY (`category_id`) REFERENCES `money_source_category` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)",
+        "code": "23000",
+        "type": "PDOException",
+        "file": "/var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/db/Command.php",
+        "line": 1302,
+        "stack-trace": [
+            "#0 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/db/Command.php(1302): PDOStatement->execute()",
+            "#1 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/db/Command.php(1102): yii\\db\\Command->internalExecute('INSERT INTO `mo...')",
+            "#2 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/db/Schema.php(431): yii\\db\\Command->execute()",
+            "#3 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/db/ActiveRecord.php(604): yii\\db\\Schema->insert('money_source', Array)",
+            "#4 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/db/ActiveRecord.php(570): yii\\db\\ActiveRecord->insertInternal(NULL)",
+            "#5 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/db/BaseActiveRecord.php(676): yii\\db\\ActiveRecord->insert(true, NULL)",
+            "#6 /var/www/standhrm1.doxsw.com/project/backend/controllers/api/BaseController.php(192): yii\\db\\BaseActiveRecord->save()",
+            "#7 /var/www/standhrm1.doxsw.com/project/backend/controllers/api/MoneySourceController.php(37): backend\\controllers\\api\\BaseController->save(Object(backend\\models\\moneySource\\MoneySource))",
+            "#8 [internal function]: backend\\controllers\\api\\MoneySourceController->actionCreate()",
+            "#9 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)",
+            "#10 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/base/Controller.php(178): yii\\base\\InlineAction->runWithParams(Array)",
+            "#11 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/base/Module.php(552): yii\\base\\Controller->runAction('create', Array)",
+            "#12 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/web/Application.php(103): yii\\base\\Module->runAction('api/money-sourc...', Array)",
+            "#13 /var/www/standhrm1.doxsw.com/project/vendor/yiisoft/yii2/base/Application.php(384): yii\\web\\Application->handleRequest(Object(yii\\web\\Request))",
+            "#14 /var/www/standhrm1.doxsw.com/project/backend/web/index.php(36): yii\\base\\Application->run()",
+            "#15 {main}"
+        ]
+    }
+}
