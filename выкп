@@ -1,0 +1,51 @@
+{
+    "name": "Database Exception",
+    "message": "SQLSTATE[42S22]: Column not found: 1054 Unknown column 'foquz_poll_mailing_list.name' in 'where clause'\nThe SQL being executed was: SELECT count(DISTINCT FPA.id) AS `total`, SUM(IF(foquz_poll_answer_processings.status='0', 1, 0)) AS `new`, SUM(IF(foquz_poll_answer_processings.status='1', 1, 0)) AS `progress`, SUM(IF(foquz_poll_answer_processings.status='4', 1, 0)) AS `work`, SUM(IF(foquz_poll_answer_processings.status='2', 1, 0)) AS `delayed`, SUM(IF(foquz_poll_answer_processings.status='3', 1, 0)) AS `done` FROM `foquz_poll_answer` `FPA` LEFT JOIN `foquz_poll` ON foquz_poll.id = FPA.foquz_poll_id LEFT JOIN `orders` ON FPA.order_id = orders.id LEFT JOIN `foquz_poll_answer_processings` ON FPA.id = foquz_poll_answer_processings.poll_answer_id LEFT JOIN `user` `executor` ON foquz_poll_answer_processings.executor_id = executor.id LEFT JOIN `user` `moderator` ON foquz_poll_answer_processings.moderator_id = moderator.id LEFT JOIN `filials` ON filials.id = orders.filial_id LEFT JOIN `filials` `answerFilial` ON answerFilial.id = FPA.answer_filial_id LEFT JOIN `filial_category` ON filial_category.id = filials.category_id LEFT JOIN `filial_category` `answerFilialCategory` ON answerFilialCategory.id = answerFilial.category_id WHERE ((`foquz_poll`.`company_id`=1) AND (`foquz_poll`.`deleted`=0) AND (`foquz_poll`.`status`=0)) AND (`FPA`.`status` IN ('in-progress', 'done')) AND (`FPA`.`foquz_poll_id`='27358') AND (`foquz_poll_mailing_list`.`name` LIKE '%ито%')",
+    "code": "42S22",
+    "type": "yii\\db\\Exception",
+    "file": "/var/www/doxswf.ru/project/vendor/yiisoft/yii2/db/Schema.php",
+    "line": 676,
+    "stack-trace": [
+        "#0 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/db/Command.php(1307): yii\\db\\Schema->convertException(Object(PDOException), 'SELECT count(DI...')",
+        "#1 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/db/Command.php(1168): yii\\db\\Command->internalExecute('SELECT count(DI...')",
+        "#2 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/db/Command.php(424): yii\\db\\Command->queryInternal('fetch', NULL)",
+        "#3 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/db/Query.php(287): yii\\db\\Command->queryOne()",
+        "#4 /var/www/doxswf.ru/project/modules/foquz/controllers/api/AnswerProcessingController.php(487): yii\\db\\Query->one()",
+        "#5 [internal function]: app\\modules\\foquz\\controllers\\api\\AnswerProcessingController->actionStatuses()",
+        "#6 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)",
+        "#7 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/Controller.php(178): yii\\base\\InlineAction->runWithParams(Array)",
+        "#8 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/Module.php(552): yii\\base\\Controller->runAction('statuses', Array)",
+        "#9 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/web/Application.php(103): yii\\base\\Module->runAction('foquz/api/answe...', Array)",
+        "#10 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/Application.php(384): yii\\web\\Application->handleRequest(Object(yii\\web\\Request))",
+        "#11 /var/www/doxswf.ru/project/web/index.php(82): yii\\base\\Application->run()",
+        "#12 {main}"
+    ],
+    "error-info": [
+        "42S22",
+        1054,
+        "Unknown column 'foquz_poll_mailing_list.name' in 'where clause'"
+    ],
+    "previous": {
+        "name": "Exception",
+        "message": "SQLSTATE[42S22]: Column not found: 1054 Unknown column 'foquz_poll_mailing_list.name' in 'where clause'",
+        "code": "42S22",
+        "type": "PDOException",
+        "file": "/var/www/doxswf.ru/project/vendor/yiisoft/yii2/db/Command.php",
+        "line": 1302,
+        "stack-trace": [
+            "#0 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/db/Command.php(1302): PDOStatement->execute()",
+            "#1 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/db/Command.php(1168): yii\\db\\Command->internalExecute('SELECT count(DI...')",
+            "#2 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/db/Command.php(424): yii\\db\\Command->queryInternal('fetch', NULL)",
+            "#3 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/db/Query.php(287): yii\\db\\Command->queryOne()",
+            "#4 /var/www/doxswf.ru/project/modules/foquz/controllers/api/AnswerProcessingController.php(487): yii\\db\\Query->one()",
+            "#5 [internal function]: app\\modules\\foquz\\controllers\\api\\AnswerProcessingController->actionStatuses()",
+            "#6 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)",
+            "#7 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/Controller.php(178): yii\\base\\InlineAction->runWithParams(Array)",
+            "#8 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/Module.php(552): yii\\base\\Controller->runAction('statuses', Array)",
+            "#9 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/web/Application.php(103): yii\\base\\Module->runAction('foquz/api/answe...', Array)",
+            "#10 /var/www/doxswf.ru/project/vendor/yiisoft/yii2/base/Application.php(384): yii\\web\\Application->handleRequest(Object(yii\\web\\Request))",
+            "#11 /var/www/doxswf.ru/project/web/index.php(82): yii\\base\\Application->run()",
+            "#12 {main}"
+        ]
+    }
+}
